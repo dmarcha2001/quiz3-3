@@ -4,8 +4,7 @@
 #include<string.h>
 int max_number=10;
 int main(){
-    FILE *out_file = fopen("num_max", "w");
-    fprintf(out_file,"%d", max_number); // write to file 
+    FILE *out_file = fopen("num_max", "r");
     fscanf(out_file, "%d", &max_number);
     int user_input;
     srand(time(0));
@@ -68,6 +67,8 @@ int main(){
     else if (user_input == 2){
         printf("what would you like the max number to be: \n");
         scanf("%d",&max_number);
+        FILE *out_file = fopen("num_max", "w");
+        fprintf(out_file,"%d", max_number); // write to file 
         main();
     }
 
@@ -76,6 +77,7 @@ int main(){
     else if (user_input = 3)
     {
         printf("thanks for playing the game, come again!");
+        return 0;
     }
     
 
