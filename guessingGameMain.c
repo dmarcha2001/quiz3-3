@@ -2,9 +2,11 @@
 #include<time.h>
 #include<stdlib.h>
 #include<string.h>
-int max_number = 10;
+int max_number=10;
 int main(){
-
+    FILE *out_file = fopen("num_max", "w");
+    fprintf(out_file,"%d", max_number); // write to file 
+    fscanf(out_file, "%d", &max_number);
     int user_input;
     srand(time(0));
     printf("welcome to the guessing game\n");
