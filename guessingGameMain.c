@@ -29,7 +29,7 @@ int main(){
         printf("In this game you must guess a number from 1-10\n");
         printf("enter you first guess\n");
         //must delete this print function, because this is only for testing purpose only
-        printf("%d\n",random_number);
+        //printf("%d\n",random_number);
         while (game_status == 1)
         {
             scanf("%s",&user_guess);
